@@ -1,0 +1,5 @@
+name: bassunet
+channels:
+  - defaults
+prefix: /home/abr/miniconda3/envs/bassunet
+
