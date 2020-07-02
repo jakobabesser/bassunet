@@ -19,7 +19,7 @@ source activate bassunet
 
 Now you can run the transcription algorithm on a test file by calling
 ```
-python transcriber.py
+python bassunet.py
 ```
 
 After running the transcriber on the test file ```ArtPepper_Anthropology_Excerpt.wav```, 
