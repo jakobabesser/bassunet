@@ -2,7 +2,7 @@
 
 Algorithm for bass transcription (joint frame-level pitch and voicing estimation) using U-Net Fully Convolutional Networks
 
-  - J. Abeßer & M. Müller: BassUNet: Jazz Bass Transcription using a U-Net Architecture, ISMIR 2020
+  - J. Abeßer & M. Müller: BassUNet: Jazz Bass Transcription using a U-Net Architecture, 2021 (under review)
 
 
 We recommend you to install *miniconda* (https://conda.io/miniconda.html).
