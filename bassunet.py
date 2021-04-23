@@ -13,13 +13,13 @@ class BassUNet:
                 Architecture, ISMIR 2020
     """
     def __init__(self,
-                 fn_model="basssegnet_mixed.h5",
+                 fn_model="bassunet_mixed.h5",
                  verbose=True):
         """ Initialize class
         Args:
             fn_model (string): Model file name
-                'basssegnet_mixed.h5': Model "BassUNet^M" (for mixed music genres)
-                'basssegnet_jazz.h5': Model "BassUNet^J" (for jazz)
+                'bassunet_mixed.h5': Model "BassUNet^M" (for mixed music genres)
+                'bassunet_jazz.h5': Model "BassUNet^J" (for jazz)
         """
         assert fn_model in ('basssegnet_mixed.h5', 'basssegnet_jazz.h5'), 'Non-valid model file name!'
         # define processing parameters as in [1]
