@@ -3,6 +3,7 @@ import librosa
 import csv
 import numpy as np
 from tensorflow.keras.models import load_model
+from pooling import MaxPoolingWithArgmax2D, MaxUnpooling2D
 import time
 import glob
 
@@ -31,8 +32,12 @@ class BassUNet:
         self.__midi_range_plus_unvoiced = np.append(self.__midi_range, -1)
         self.__n_bins = len(self.__midi_range)
         self.__fmin = 440.*2**((self.__midi_range[0]-69)/12.)
-        self.__model = load_model(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', fn_model))
+        self.__model = load_model(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'data', fn_model),
+                                  custom_objects={"MaxPoolingWithArgmax2D": MaxPoolingWithArgmax2D,
+                                                  "MaxUnpooling2D": MaxUnpooling2D})
         self.__verbose = verbose
+
+
 
     def run(self, fn_wav, min_note_len=2):
         """ Transcribe WAV file
