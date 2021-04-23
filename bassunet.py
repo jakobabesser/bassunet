@@ -21,7 +21,7 @@ class BassUNet:
                 'bassunet_mixed.h5': Model "BassUNet^M" (for mixed music genres)
                 'bassunet_jazz.h5': Model "BassUNet^J" (for jazz)
         """
-        assert fn_model in ('basssegnet_mixed.h5', 'basssegnet_jazz.h5'), 'Non-valid model file name!'
+        assert fn_model in ('bassunet_mixed.h5', 'bassunet_jazz.h5'), 'Non-valid model file name!'
         # define processing parameters as in [1]
         self.__fs = 22050.
         self.__hop_len = 512
